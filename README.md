@@ -24,3 +24,16 @@ This project demonstrates a basic container running a Bash script as a non-root 
 
 ```bash
 docker build -t info-script-image .
+
+# DevSecOps Trainee Project (Task 3)
+
+This repository contains four tasks for DevSecOps training.
+
+## Task 1 – Log Checker
+
+- Bash script: `log_checker.sh`
+- Sample log file: `example.log`
+- How to run:
+
+```bash
+./log_checker.sh example.log
