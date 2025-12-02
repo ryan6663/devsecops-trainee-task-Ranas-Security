@@ -1,0 +1,6 @@
+2025-01-01 12:00:00 INFO Application started
+2025-01-01 12:01:10 WARN Low disk space
+2025-01-01 12:02:20 ERROR Failed to open file
+2025-01-01 12:03:33 INFO User logged in
+2025-01-01 12:04:55 ERROR Database error
+
