@@ -1,39 +1,23 @@
-# Log Checker Script (Task 1)
+# DevSecOps Trainee Tasks – Ranas Security
 
-This repository contains a simple Bash script `log_checker.sh` that analyzes log files.
+This repository contains two main tasks:  
+- **Task 1:** Bash log checker  
+- **Task 2:** Docker container running a non-root script  
 
-## Usage
+---
 
+## Task 1 – Log Checker Script
+
+This task includes a Bash script `log_checker.sh` that analyzes log files and prints:
+
+- Total number of lines  
+- Number of lines containing `INFO`  
+- Number of lines containing `WARN`  
+- Number of lines containing `ERROR`  
+
+The sample file `example.log` is provided for testing.
+
+### How to run:
 ```bash
 ./log_checker.sh example.log
 
-# Simple Container Script (Task 2)
-
-This project demonstrates a basic container running a Bash script as a non-root user.
-
-## Files
-
-- `info_script.sh` – A small Bash script that prints:
-  - Current user name
-  - Current working directory
-  - Value of environment variable APP_ENV (or "default" if not set)
-- `Dockerfile` – Builds a container image using a slim base, creates a non-root user, and runs the script.
-- `README.md` – This file.
-
-## Build Docker Image
-
-```bash
-docker build -t info-script-image .
-
-# DevSecOps Trainee Project (Task 3)
-
-This repository contains four tasks for DevSecOps training.
-
-## Task 1 – Log Checker
-
-- Bash script: `log_checker.sh`
-- Sample log file: `example.log`
-- How to run:
-
-```bash
-./log_checker.sh example.log
