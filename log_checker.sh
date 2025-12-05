@@ -1,31 +1,40 @@
 #!/bin/bash
 
-# Check if a log file path is provided
+show_help() {
+    echo "Usage: $0 <log_file>"
+    echo ""
+    echo "Description:"
+    echo "  Simple log analyzer that counts INFO, WARN, and ERROR messages."
+    echo ""
+    echo "Exit codes:"
+    echo "  0 - Success"
+    echo "  1 - Missing argument"
+    echo "  2 - File does not exist"
+}
+
+# If no argument provided
 if [ -z "$1" ]; then
     echo "Error: No log file provided."
-    echo "Usage: $0 <log_file_path>"
+    show_help
     exit 1
 fi
 
-LOG_FILE="$1"
+FILE="$1"
 
-# Check if the file exists
-if [ ! -f "$LOG_FILE" ]; then
-    echo "Error: File '$LOG_FILE' does not exist."
-    exit 1
+# Check if file exists
+if [ ! -f "$FILE" ]; then
+    echo "Error: File '$FILE' does not exist."
+    exit 2
 fi
 
-# Count total lines
-TOTAL_LINES=$(wc -l < "$LOG_FILE")
+TOTAL=$(wc -l < "$FILE")
+INFO=$(grep -c "INFO" "$FILE")
+WARN=$(grep -c "WARN" "$FILE")
+ERROR=$(grep -c "ERROR" "$FILE")
 
-# Count INFO, WARN, ERROR lines
-INFO_LINES=$(grep -c "INFO" "$LOG_FILE")
-WARN_LINES=$(grep -c "WARN" "$LOG_FILE")
-ERROR_LINES=$(grep -c "ERROR" "$LOG_FILE")
+echo "Total lines: $TOTAL"
+echo "INFO: $INFO"
+echo "WARN: $WARN"
+echo "ERROR: $ERROR"
 
-# Print results
-echo "Total lines: $TOTAL_LINES"
-echo "INFO:  $INFO_LINES"
-echo "WARN:  $WARN_LINES"
-echo "ERROR: $ERROR_LINES"
-
+exit 0
