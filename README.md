@@ -1,23 +1,26 @@
-# DevSecOps Trainee Tasks – Ranas Securitylllllllll
+# DevSecOps Trainee Project – Ranas Security
 
-This repository contains two main tasks:  
-- **Task 1:** Bash log checker  
-- **Task 2:** Docker container running a non-root script  
+This repository contains four small tasks designed to test basic DevSecOps skills:
+
+- **Task 1:** Bash log checker script  
+- **Task 2:** Non-root Docker container running an environment info script  
+- **Task 3:** Git workflow + documentation  
+- **Task 4:** Simple DevSecOps reasoning + CI pipeline  
 
 ---
 
-## Task 1 – Log Checker Script
+## 🧪 Task 1 — Log Checker (Bash)
 
-This task includes a Bash script `log_checker.sh` that analyzes log files and prints:
+The script `log_checker.sh` prints:
 
-- Total number of lines  
-- Number of lines containing `INFO`  
-- Number of lines containing `WARN`  
-- Number of lines containing `ERROR`  
+- total number of lines  
+- number of lines with `INFO`  
+- number of lines with `WARN`  
+- number of lines with `ERROR`  
+- clear error if file does not exist  
+- non-zero exit codes on errors  
 
-The sample file `example.log` is provided for testing.
+### Run:
 
-### How to run:
 ```bash
 ./log_checker.sh example.log
-
