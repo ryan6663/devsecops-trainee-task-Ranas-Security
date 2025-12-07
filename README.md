@@ -1,4 +1,4 @@
-# DevSecOps Trainee Tasks – Ranas Security
+# DevSecOps Trainee Tasks – Ranas Securitylllllllll
 
 This repository contains two main tasks:  
 - **Task 1:** Bash log checker  
