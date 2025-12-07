@@ -9,7 +9,7 @@ This repository contains four small tasks designed to test basic DevSecOps skill
 
 ---
 
-## 🧪 Task 1 — Log Checker (Bash)
+## Task 1 — Log Checker (Bash)
 
 The script `log_checker.sh` prints:
 
@@ -24,3 +24,16 @@ The script `log_checker.sh` prints:
 
 ```bash
 ./log_checker.sh example.log
+
+## Task 2 — Docker + Non-root Execution
+
+- The container runs a simple script that prints:
+
+- current username
+
+- current working directory
+
+- the APP_ENV variable (or a default)
+
+
+
